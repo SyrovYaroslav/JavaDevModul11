@@ -1,7 +1,11 @@
 package entities;
 
+
 import jakarta.persistence.*;
 import lombok.Data;
+import lombok.ToString;
+
+import java.util.Set;
 
 
 @Entity
@@ -14,4 +18,7 @@ public class Client {
 
     @Column(name = "name")
     private String name;
+
+    @OneToMany(mappedBy = "client", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    private Set<Ticket> tickets;
 }

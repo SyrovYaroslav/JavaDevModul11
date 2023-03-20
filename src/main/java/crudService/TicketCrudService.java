@@ -7,8 +7,8 @@ import org.hibernate.Session;
 import org.hibernate.Transaction;
 import util.HibernateUtil;
 
-import java.time.LocalDateTime;
 import java.util.List;
+import java.util.Set;
 
 public class TicketCrudService {
     public Ticket getTicketById(int id) {
